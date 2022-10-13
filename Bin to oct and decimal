@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<math.h>
+int dec(long int b)
+{
+	int r,d=0,i=0;
+while(b!=0)
+	{
+		r=b%10;
+		if(r==1)
+		{
+			d=d+pow(2,i);
+		}
+		i++;
+		b/=10;
+	}
+	return d;
+}
+int main()
+{
+	long int b,f,t;
+	int r,o=0,d=0,i=0;
+	printf("Enter binary : ");
+	scanf("%ld",&b);
+	t=b;
+	printf("Decimal = %d",dec(b));
+	
+	while(t!=0)
+	{
+		r=t%1000;
+		o=o*10+dec(r);
+		t/=1000;	
+	}
+	while(o!=0)
+	{
+		r=o%10;
+		f=f*10+r;
+		o/=10;
+		
+	}
+	printf("\nOctal = %d",f);
+	
+}
