@@ -1,0 +1,45 @@
+#include<Stdio.h>
+int main()
+{
+	int m1[10][10],m2[10][10],i,j,r,c,m3[10][10];
+	printf("Enter number of rows:");
+	scanf("%d",&r);
+	printf("Enter number of columns:");
+	scanf("%d",&c);
+	printf("Enter matrix 1 : \n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&m1[i][j]);
+		}
+	}
+	printf("Enter matrix 2 \n: ");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&m2[i][j]);
+		}
+	}
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			m3[i][j]=0;
+			for(int k=0;k<c;k++)
+			{
+				m3[i][j]+=m1[i][k]*m2[k][j];
+			}
+			
+		}
+	}
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("%d  ",m3[i][j]);
+		}
+		printf("\n");
+	}
+}
