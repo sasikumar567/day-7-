@@ -1,0 +1,25 @@
+#include<Stdio.h>
+int main()
+{
+	int i,m,n;
+	printf("Enter starting value : ");
+	scanf("%d",&m);
+	printf("Enter ending value : ");
+	scanf("%d",&n);
+	printf("Odd numbers : ");
+	for(i=m;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+			printf("%d ",i);
+		}
+	}
+	printf("\nEven numbers : ");
+	for(i=m;i<=n;i++)
+	{
+		if(i%2==0)
+		{
+			printf("%d ",i);
+		}
+	}	
+}
