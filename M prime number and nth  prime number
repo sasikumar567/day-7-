@@ -1,0 +1,48 @@
+#include<Stdio.h>
+#include<math.h>
+int main()
+{
+	int m,n,i,j=0,a[100];
+	printf("enter n:");
+	scanf("%d",&n);
+	printf("enter m : ");
+	scanf("%d",&m);
+	for(i=2;i<pow(100,n);i++)
+	{
+		int s=0;
+		for(int x=1;x<i;x++)
+		{
+			if(i%x==0)
+			{
+				s=s+x;
+			}
+		}
+		if(s==i)
+		{
+			a[j++]=i;
+		}
+		if(j==n)
+		{
+			break;
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("%d  ",a[i]);
+	}
+	printf("\n");
+	for(i=0;i<n;i++)
+	{
+		int c=0;
+		for(j=1;j<=a[i];j++)
+		{
+			if(a[i]%j==0 and c<m)
+			{
+				printf("%d  ",j);
+				c++;
+			}
+			
+		}
+		printf("\n");
+	}
+}
